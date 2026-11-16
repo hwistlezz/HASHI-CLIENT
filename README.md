@@ -36,6 +36,14 @@
 | 매거진       | 일본 맛집과 여행 관련 콘텐츠를 제공합니다.                                 |
 | PWA          | 모바일 웹 환경에서 앱처럼 사용할 수 있도록 PWA를 지원합니다.               |
 
+<img width="7680" height="4320" alt="13  맛집 탐색" src="https://github.com/user-attachments/assets/22453cb0-5cab-4d8e-95c2-743e6e80fb0c" />
+<img width="7680" height="4320" alt="14  식당 예약 신청" src="https://github.com/user-attachments/assets/d02a100f-44d0-4ec7-8d3f-7c2cc4b8c9aa" />
+<img width="7680" height="4320" alt="15  어디든 예약" src="https://github.com/user-attachments/assets/093c808c-ab57-4439-a1be-265e8b964929" />
+<img width="7680" height="4320" alt="16  예약 상태 확인" src="https://github.com/user-attachments/assets/b49287ac-b8e8-4c83-81a1-951926a4e488" />
+<img width="7680" height="4320" alt="17  방문 이후 구조" src="https://github.com/user-attachments/assets/caa6b47f-1b82-43d1-a5f6-bf7f470d2e5c" />
+
+---
+
 ## ⚒️ Tech Stack
 
 > 자세한 기술 스택과 버전 기준은 [Tech Stack](./docs/architecture/tech-stack.md)을 따릅니다.
@@ -88,6 +96,8 @@
 
 </div>
 
+---
+
 ## 📁 Folder Responsibility
 
 > 자세한 기준은 [App Structure](./docs/architecture/app-structure.md)를 따릅니다.
@@ -107,6 +117,8 @@
 - 도메인 의미가 없는 공통 hook, util, component는 shared에 둡니다.
 - page끼리는 서로의 내부 파일을 직접 import하지 않습니다.
 - UI primitive는 packages/hds-ui, icon은 packages/hds-icons, token은 packages/hds-tokens에서 관리합니다.
+
+---
 
 ## 🧭 Workspace Apps
 
@@ -137,6 +149,8 @@ pnpm exec vercel build --local-config vercel.admin.json
 pnpm exec vercel deploy --prebuilt --local-config vercel.admin.json
 ```
 
+---
+
 ## 📖 Convention
 
 ### Coding Convention
@@ -163,13 +177,15 @@ pnpm exec vercel deploy --prebuilt --local-config vercel.admin.json
 
 ### Package Management
 
+> 자세한 기준은 [Package Management](./docs/conventions/package-management.md)을 따릅니다.
+
 - 패키지 매니저는 `pnpm`을 사용합니다.
 - `npm`, `yarn`, `bun` lockfile을 추가하지 않습니다.
 - 외부 패키지 버전은 `pnpm-workspace.yaml`의 catalog에서 관리합니다.
 - 내부 workspace 의존성은 `workspace:*`를 사용합니다.
 - 새 패키지를 추가하면 `package.json`, `pnpm-lock.yaml`, 필요 시 `pnpm-workspace.yaml`을 함께 갱신합니다.
 
-자세한 기준은 [Package Management](./docs/conventions/package-management.md)을 따릅니다.
+---
 
 ## 🤖 AI Harness
 
@@ -196,7 +212,7 @@ pnpm exec vercel deploy --prebuilt --local-config vercel.admin.json
 - [Spec Templates](./docs/workflows/spec-templates/README.md)
 - [Turbo Generators](./docs/workflows/turbo-generators.md)
 
-#### Architecture
+### Architecture
 
 <img width="1672" height="941" alt="architecture" src="https://github.com/user-attachments/assets/fecb81dc-0a34-4f42-a502-fddb122ee227" />
 
