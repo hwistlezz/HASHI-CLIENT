@@ -177,13 +177,13 @@ pnpm exec vercel deploy --prebuilt --local-config vercel.admin.json
 
 ### Package Management
 
+> 자세한 기준은 [Package Management](./docs/conventions/package-management.md)을 따릅니다.
+
 - 패키지 매니저는 `pnpm`을 사용합니다.
 - `npm`, `yarn`, `bun` lockfile을 추가하지 않습니다.
 - 외부 패키지 버전은 `pnpm-workspace.yaml`의 catalog에서 관리합니다.
 - 내부 workspace 의존성은 `workspace:*`를 사용합니다.
 - 새 패키지를 추가하면 `package.json`, `pnpm-lock.yaml`, 필요 시 `pnpm-workspace.yaml`을 함께 갱신합니다.
-
-자세한 기준은 [Package Management](./docs/conventions/package-management.md)을 따릅니다.
 
 ---
 
